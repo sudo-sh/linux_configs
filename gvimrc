@@ -65,7 +65,7 @@ set hlsearch
 filetype plugin on
 
 " Create default mappings
-#let g:NERDCreateDefaultMappings = 1
+let g:NERDCreateDefaultMappings = 1
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -170,4 +170,57 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
+
+
+" NERDTree
+"
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+":NERDTreeFocus                                                  *:NERDTreeFocus*
+"    Opens (or reopens) the NERDTree if it is not currently visible;
+"    otherwise, the cursor is moved to the already-open NERDTree.
+":NERDTree [<start-directory> | <bookmark>]                           *:NERDTree*
+"    Opens a fresh NERDTree. The root of the tree depends on the argument
+"    given. There are 3 cases: If no argument is given, the current directory
+"    will be used.  If a directory is given, that will be used. If a bookmark
+"    name is given, the corresponding directory will be used.  For example: >
+"
+"
+":NERDTreeToggle [<start-directory> | <bookmark>]               *:NERDTreeToggle*
+"    If a NERDTree already exists for this tab, it is reopened and rendered
+"    again. If <start-directory> or <bookmark> is given, the root of NERDTree
+"    is set to that path. If no NERDTree exists for this tab then this command
+"    acts the same as the |:NERDTree| command.
+"
+"
+":NERDTreeFind [<path>]                                           *:NERDTreeFind*
+"    Without the optional argument, find and reveal the file for the active
+"    buffer in the NERDTree window.  With the <path> argument, find and
+"    reveal the specified path.
+"
+"    Focus will be shifted to the NERDTree window, and the cursor will be
+"    placed on the tree node for the determined path.  If a NERDTree for the
+"    current tab does not exist, a new one will be initialized.
+"
+
+
+
+
+"o........Open files, directories and bookmarks......................|NERDTree-o|
+"go.......Open selected file, but leave cursor in the NERDTree......|NERDTree-go|
+"         Find selected bookmark directory in current NERDTree
+"t........Open selected node/bookmark in a new tab...................|NERDTree-t|
+"T........Same as 't' but keep the focus on the current tab..........|NERDTree-T|
+"i........Open selected file in a split window.......................|NERDTree-i|
+"gi.......Same as i, but leave the cursor on the NERDTree...........|NERDTree-gi|
+"s........Open selected file in a new vsplit.........................|NERDTree-s|
+"gs.......Same as s, but leave the cursor on the NERDTree...........|NERDTree-gs|
+"<CR>.....User-definable custom open action.......................|NERDTree-<CR>|
+"O........Recursively open the selected directory....................|NERDTree-O|
+"x........Close the current nodes parent.............................|NERDTree-x|
+"X........Recursively close all children of the current node.........|NERDTree-X|
+"e........Edit the current directory.................................|NERDTree-e|
+"
 
